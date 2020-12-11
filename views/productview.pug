@@ -1,0 +1,29 @@
+extends layout
+
+block content
+ .row.mt-4
+  .col-8
+   h1
+    p.text-danger #{title}
+  .col-4
+   a(href="/product/add" class='btn btn-info float-right') Create New
+ table.table.table-dark
+  thead
+   tr
+     
+    th Course Name
+    th Course Id
+    th Course Duration(Hrs)
+    th Course Fee(USD)
+    th Actions
+  tbody
+   each Course in products
+    tr
+     td= Course.CourseName
+     td= Course.Courseid
+     td= Course.CourseDuration
+     td= Course.CourseFee
+     td
+      a.btn.btn-danger.mr-2.align-center(href="product/delete/"+Course._id) Delete
+      a.btn.btn-warning(href="product/Edit/"+Course._id) Edit
+    

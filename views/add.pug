@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1
+        p.text-danger Edurekas Course List
+    form(action="/product/add", method="post")
+        .form-group
+            <label for="exampleFormControlInput1">Course Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"  name="CourseName">
+        
+        .form-group
+            <label for="exampleFormControlInput1">Course Id</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" name="Courseid">
+       
+        .form-group
+            <label for="exampleFormControlInput1">Course Duration</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1"  name="CourseDuration">
+        
+        .form-group
+            <label for="exampleFormControlInput1">Course Fee(USD)</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1"  name="CourseFee">
+        
+        input(type="submit", value="Create New" class="btn btn-success")
+        </div>
+    

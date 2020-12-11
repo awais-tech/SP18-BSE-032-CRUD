@@ -1,0 +1,19 @@
+extends ./layout
+
+block content
+    h1 Edit Course
+    form(action="/product/Edit/"+product._id,method="post")
+        .form-group
+            label(for="name") Course Name
+            input#name(type="text", class="form-control", name="CourseName", value=product.CourseName required)
+        .form-group
+            label(for="name") Course id
+            input#name(type="number", class="form-control", name="Courseid", value=product.Courseid required)
+        .form-group
+            label(for="price") Course Duration
+            input#price(type="number", class="form-control", name="CourseDuration", value=product.CourseDuration required)
+        .form-group
+            label(for="price") CourseFee
+            input#price(type="number", class="form-control", name="CourseFee", value=product.CourseFee required)
+        input(type="submit", class="btn btn-info")
+    
